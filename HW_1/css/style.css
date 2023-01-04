@@ -1,0 +1,115 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    text-decoration: none;
+    color: black;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+body {
+    line-height: 1;
+    background-color: #FFFFFF;
+    margin-top: 30px;
+    font-family: 'Lato', sans-serif;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 1fr 2fr 1fr 2fr ;
+    align-items: center;
+    padding-bottom: 50px;
+}
+.logo {
+    text-align: start;
+}
+.nav-bar ul {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+}
+.nav-bar ul li a{
+    color: black;
+    font-size: 20px;
+}
+.btn_sign {
+    display: flex;
+    font-size: 20px;
+    color: black;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.btn_sign a{
+margin-right: 38px;
+font-size: 20px;
+}
+.btn_sign button {
+    color: white;
+    background-color: #01996D;
+    border: none;
+    font-size: 20px;
+    padding: 15px 50px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.photo_container {
+    background-image: url(/img/BG.png);
+    display: grid;
+    grid-template-columns:  1fr 3fr  7.5fr;
+    height: 895px;
+}
+.photo_container h1{
+    color: #01996D;
+    font-size: 65px;
+    font-family: 'Lora', serif;
+    margin-bottom: 50px;
+}
+.photo_container p{
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+.photo_container button{
+    color: white;
+    background-color: #01996D;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 50px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.photo_container_inner {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
