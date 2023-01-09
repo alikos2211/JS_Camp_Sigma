@@ -218,9 +218,17 @@ header {
     justify-content: space-evenly;
 }
 .customer-container {
-    margin: 120px 0;
+    margin: 120px 0px 170px 0px;
     display: grid;
     grid-template-columns: 1fr 3fr 2.5fr 1fr;
+}
+.left-side {
+    position: relative;
+}
+#shape {
+    position: absolute;
+    left: -100px;
+    top: 350px;
 }
 .right-side p:first-child {
     font-size: 25px;
