@@ -1,15 +1,39 @@
 
 /* Spacing */
+$space-xl:170px;
 $horizontal_space: 144px;
-$vertical_space: 47px;
+$space-l: 104px;
+$space-ml: 75px;
+$space-m: 47px;
 $space-s: 32px;
 $space-xs: 16px;
 $space-xxs: 8px;
 
-
-
 /* Colors*/
-$main_font_color: #212832;
-/* Fonts*/
+$header_font_color: #212832;
+$main_font_color: #5E6282;
+$red_accent: #DF6951; 
+$coral_accent: #F15A2B;
+$yellow_accent: #F1A501;
+$blue_accent: #006380;
+$white: #FFFF;
+$h1_font_color: #14183E;
+$cataloge_color: #1E1D4C;
+
+/* Font Families*/
 $main_font_family:  'Open Sans', sans-serif;
-$font-size-s: 17px;
+$font_family_for_h3: 'Poppins', sans-serif;
+$font_family_for_h3_regular: 'Poppins', sans-serif;
+$font_family_for_h1: 'Volkhov', serif;
+
+/*Font Sizes*/
+$font-size-xl: 84px;
+$font-size-l: 50px;
+$font-size-s: 24px;
+$font-size-xs: 18px;
+$font-size-xxs: 16px;
+
+/*Line height*/
+
+$line-height-s: 30px;
+$line-height-l: 89px;

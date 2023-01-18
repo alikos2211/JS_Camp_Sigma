@@ -1,0 +1,23 @@
+@media (max-width: 478.98px){
+    .block-girl-container-right{
+        display: none;
+    }
+    .block-girl-container-right__plane{
+        display: none;
+    }
+    .block-destinations-cities{
+        display: grid;
+        grid-template-columns: repeat(1fr);
+        align-items: start;
+        justify-items: center;
+    }
+    .block-destinations-cities__rome {
+        grid-row: 1/2;
+    }
+    .block-destinations-cities__london {
+        grid-row: 2/3;
+    }
+    .block-destinations-cities__europe {
+        grid-row: 3/4;
+    }
+}
