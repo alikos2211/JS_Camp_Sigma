@@ -508,7 +508,7 @@ section {
 
 .block-booking {
   padding: 0 144px;
-  padding-bottom: 104px;
+  padding-bottom: 170px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -813,13 +813,6 @@ section {
   font-family: "Poppins", sans-serif;
 }
 
-.block-booking-right-wrapper__bottom-line__heart_hover {
-  display: none;
-}
-.block-booking-right-wrapper__bottom-line__heart_hover:hover {
-  display: contents;
-}
-
 .block-booking-right__container__lines {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -847,4 +840,132 @@ section {
   border: none;
   width: 40%;
   position: absolute;
+}
+
+.block-testimonials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0 144px;
+  padding-bottom: 104px;
+}
+
+.block-testimonials-left h3 {
+  font-family: "Poppins", sans-serif;
+  color: #5E6282;
+  font-size: 18px;
+  font-weight: bold;
+}
+.block-testimonials-left h1 {
+  font-family: "Volkhov", serif;
+  color: #14183E;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.block-testimonials-right {
+  width: 30%;
+  position: relative;
+  height: 100%;
+}
+
+.block-testimonials-right__photo {
+  position: absolute;
+  top: -24%;
+  left: -9%;
+}
+
+.block-testimonials-right__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 44px;
+  padding: 16px 32px;
+  background-color: white;
+  border-radius: 24px;
+  -webkit-box-shadow: 10px -5px 100px 12px rgba(240, 240, 240, 0.8431372549);
+          box-shadow: 10px -5px 100px 12px rgba(240, 240, 240, 0.8431372549);
+  gap: 0;
+}
+.block-testimonials-right__container p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #5E6282;
+  line-height: 30px;
+  padding-bottom: 32px;
+}
+.block-testimonials-right__container h3 {
+  color: #5E6282;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  padding-bottom: 16px;
+}
+.block-testimonials-right__container h5 {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #5E6282;
+}
+
+.block-companies {
+  padding-bottom: 220px;
+  padding: 0 144px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.block-companies__logos {
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+.block-companies__logos img {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+.block-companies__logos img:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  background-color: white;
+  border-radius: 24px;
+  -webkit-box-shadow: 10px -5px 100px 12px rgba(240, 240, 240, 0.8431372549);
+          box-shadow: 10px -5px 100px 12px rgba(240, 240, 240, 0.8431372549);
+}
+
+#axon {
+  width: 160px;
+  height: 120px;
+}
+
+#jetstar {
+  width: 160px;
+  height: 120px;
+}
+
+#expedia {
+  width: 160px;
+  height: 120px;
+}
+
+#qantas {
+  width: 160px;
+  height: 120px;
+}
+
+#alitalia {
+  width: 160px;
+  height: 120px;
 }/*# sourceMappingURL=style.css.map */
