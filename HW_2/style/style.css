@@ -917,7 +917,6 @@ section {
 }
 
 .block-companies {
-  padding-bottom: 220px;
   padding: 0 144px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -945,27 +944,266 @@ section {
           box-shadow: 10px -5px 100px 12px rgba(240, 240, 240, 0.8431372549);
 }
 
-#axon {
+#axon, #alitalia, #qantas, #expedia, #jetstar {
   width: 160px;
   height: 120px;
 }
 
-#jetstar {
-  width: 160px;
-  height: 120px;
+.block-form {
+  padding: 170px 144px;
+  background-image: url("/img/form_decoration.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom 4vh right 3vw;
+  margin-right: 104px;
+  padding-bottom: 104px;
 }
 
-#expedia {
-  width: 160px;
-  height: 120px;
+.block-form__container {
+  background-color: #DFD7F9;
+  border-top-left-radius: 120px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 75px 144px;
+  background-image: url("/img/form-left-docoration.png"), url("/img/form-right-docoration.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom left, top right;
+  background-blend-mode: soft-light;
+  position: relative;
+}
+.block-form__container h2 {
+  color: #5E6282;
+  font-family: "Poppins", sans-serif;
+  font-size: 33px;
+  text-align: center;
+  padding-bottom: 75px;
+}
+.block-form__container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 6vh;
 }
 
-#qantas {
-  width: 160px;
-  height: 120px;
+#form__input {
+  font-family: "Montserrat", sans-serif;
+  padding: 0 104px 0 75px;
+  margin-right: 16px;
+  font-size: 14px;
+  background-image: url("/img/email.png");
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: center left 32px;
+  border: none;
+  height: 100%;
 }
 
-#alitalia {
-  width: 160px;
-  height: 120px;
+#form__button {
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF946D), to(#FF7D68));
+  background: linear-gradient(#FF946D, #FF7D68);
+  border: none;
+  padding: 0 32px 0 32px;
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  height: 100%;
+}
+
+.block-form__container__circle__wrapper {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+}
+
+.block-form__container__circle {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(#5E3BE1, #747DEF));
+  background: linear-gradient(#747DEF #5E3BE1);
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+.block-form__container__circle img {
+  padding: 16px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.block-footer {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 16px 47px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 104px;
+}
+.block-footer h1 {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  color: #181E4B;
+  font-size: 50px;
+  font-family: "Poppins", sans-serif;
+}
+.block-footer h3 {
+  color: #080809;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+}
+.block-footer h3:nth-child(2) {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+.block-footer h3:nth-child(3) {
+  grid-column: 4/5;
+  grid-row: 1/2;
+}
+.block-footer h3:nth-child(4) {
+  grid-column: 5/6;
+  grid-row: 1/2;
+}
+.block-footer p {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  font-family: "Poppins", sans-serif;
+  color: #5E6282;
+  font-size: 14px;
+  line-height: 124.5%;
+}
+.block-footer a {
+  color: #5E6282;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+.block-footer a:nth-child(6) {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+.block-footer a:nth-child(7) {
+  grid-column: 4/5;
+  grid-row: 2/3;
+}
+.block-footer a:nth-child(8) {
+  grid-column: 5/6;
+  grid-row: 2/3;
+}
+.block-footer a:nth-child(9) {
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
+.block-footer a:nth-child(10) {
+  grid-column: 4/5;
+  grid-row: 3/4;
+}
+.block-footer a:nth-child(11) {
+  grid-column: 5/6;
+  grid-row: 3/4;
+}
+.block-footer a:nth-child(12) {
+  grid-column: 3/4;
+  grid-row: 4/5;
+}
+.block-footer a:nth-child(13) {
+  grid-column: 4/5;
+  grid-row: 4/5;
+}
+.block-footer a:nth-child(14) {
+  grid-column: 5/6;
+  grid-row: 4/5;
+}
+
+.block-footer__socials__wrapper {
+  grid-column: 6/7;
+  grid-row: 1/5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 44px;
+}
+
+.block-footer__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.social-icon {
+  position: relative;
+  display: inline-block;
+  width: 41px;
+  height: 41px;
+}
+.social-icon::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(216, 215, 215, 0.5);
+          box-shadow: 0px 0px 8px 0px rgba(216, 215, 215, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.social-icon .social-icon-image {
+  height: 16px;
+  position: absolute;
+  width: 16px;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  margin-left: -8px;
+  margin-top: -8px;
+  display: block;
+}
+
+#instagram-icon::before {
+  background-image: conic-gradient(from 0.5turn, #80A4CE, #F289AA, #C68BF0, #D164DA, #C963E8, #BFC2E8, #FFC999, #BAD0F1, #FFFFFF);
+}
+
+#footer-stores {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#rights {
+  font-family: "Poppins", sans-serif;
+  color: #5E6282;
+  font-size: 14px;
+  line-height: 124.5%;
+  text-align: center;
+  padding-bottom: 104px;
 }/*# sourceMappingURL=style.css.map */
