@@ -1,10 +1,58 @@
-@media (max-width: 478.98px){
+
+@media only screen and (max-width: 478.98px){
     .block-girl-container-right{
+      display: none;
+    }
+    .block-girl{
+      padding: $space-xs $space-xs ;
+    }
+    .block-girl-container-right__plane1{
         display: none;
     }
-    .block-girl-container-right__plane{
+    .block-girl-container-right__plane2{
         display: none;
     }
+    .block-girl-header{
+      gap: 0 ;
+      grid-template-columns: repeat(8, 1fr) ;
+    }
+    .header__logo {
+      grid-column: 1 ;
+    }
+    .header__nav-bar{
+      grid-column: 2/4 ;
+      grid-row: 1/2;
+      ul {
+          display: flex ;
+          justify-content: flex-start ; 
+          li{
+            padding-right: $space-xs ;
+          } 
+      }
+  }
+  .header__authorization__login{
+    grid-column: 3/4;
+    justify-self: end;
+    grid-row: 1/2;
+    
+}
+.header__authorization__button{
+  grid-column: 4/5;
+  grid-row: 1/2;
+  justify-self: start;
+  padding-left: $space-xxs;
+}
+.header__dropdown {
+  grid-column: 4/5;
+  grid-row: 1/2;
+  justify-self: center;
+  padding-left: $space-m;
+}
+.block-girl-container-left{
+  h1{
+    font-size: $font-size-m;
+  }
+}
     .block-destinations-cities{
         display: grid;
         grid-template-columns: repeat(1fr);

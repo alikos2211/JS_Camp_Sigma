@@ -23,3 +23,8 @@ nav,
 section {
     display: block;
 }
+body{
+    width: fit-content;
+    min-width: 100%;
+    box-sizing: border-box;
+}

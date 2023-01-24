@@ -1,14 +1,16 @@
 @import "_variables";
 @import "_reset";
 @import "_mixins";
-@import "_media";
+
 
 .block-girl {
     background-image: url('/img/Decore.png');
     background-position: top right;
     background-repeat: no-repeat;
     padding: $space-m $horizontal_space;
+    background-size: contain;
 }
+
 .block-girl-header {
     padding-bottom: $space-s ;
     font-family: $main_font_family;
@@ -31,6 +33,21 @@
         justify-content: space-between;
     }
 }
+#nav1 {
+    &:hover{
+        font-size: $font-size-xs;
+        font-weight: bold;
+    }
+}
+#nav2{
+    @extend #nav1;
+}
+#nav3{
+    @extend #nav1;
+}
+#nav4{
+    @extend #nav1;
+}
 .header__authorization__login{
     grid-column: 8/9;
     justify-self: end;
@@ -46,6 +63,10 @@
         border-radius: 3px;
         font-size: $font-size-xxs;
         cursor: pointer;
+        &:hover{
+            background-color: $red_accent;
+            color: $white;
+        }
     }
 }
 .header__dropdown {
@@ -97,6 +118,14 @@
            border: none;
            text-align: center;
            vertical-align: center;   
+           padding: 0;
+          
+           img{
+                height: 16px;
+                width: 16px;
+                margin: auto;
+                display: block;
+           }
     }
     #more_button {
         color: $white;
@@ -106,8 +135,32 @@
         padding: $space-xs;
         border: none;
         margin-right: $space-s;
+        &:hover{
+            background-color: #ff9900;
+        }
     }
 }
+.block-girl-container-right{
+    position: relative;
+}
+.block-girl-container-right__plane1{
+    position: absolute;
+    right: 40rem;
+    top: 10rem;
+    &:hover{
+        animation: flight 3s;
+    }
+}
+@keyframes flight{
+    from {transform: translate(0, 0);} 
+    to{transform: translate(50rem, -20rem); opacity: 0;} 
+} 
+.block-girl-container-right__plane2{
+    position: absolute;
+    right: 8rem;
+    top: 17rem;
+    
+}  
 .block-offers {
     background-image: url(/img/block-offers__decoration.png);
     background-position: top right;
@@ -132,14 +185,49 @@
 }
 .block-offers__cataloge {
     display: grid;
-    grid-template-columns: $horizontal_space repeat(4, 1fr)  $horizontal_space;
-    gap: $space-l;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $space-m;
+    padding: 0 $horizontal_space;
+    align-items: baseline;
+}
+#calculated{
+    white-space: nowrap;
 }
 .block-offers__cataloge_item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: $space-s $space-m $space-m $space-m ;
+    padding: $space-m;
+    position: relative;
+    z-index: 10;
+    
+    &:hover::before{
+        border-radius: 36px;
+        box-shadow: 0px 0px 8px 0px rgba(216, 215, 215, 0.5);
+       
+    }
+    &::before{
+        content: "";
+        background-color: $white;
+        z-index: -5;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+    }
+    &:hover::after{
+        content: "";
+        background-image: url('/img/Red_shape.png');
+        width: 100px;
+        height: 100px; 
+        position: absolute;
+        transform: translateZ(-10rem);
+        z-index: -10;
+        bottom: -2rem;
+        left: -2rem;
+    }
     img{
         &:first-child{
             width: 66px;
@@ -153,10 +241,6 @@
             height: 50px;
            
         }
-    &:hover{
-        border-radius: 5px;
-        box-shadow: -8px 8px 8px 0px rgba(216, 215, 215, 0.5);
-    }
     }
     #cataloge_plane{
         width: 137px;
@@ -167,8 +251,8 @@
         height: 69px;
     }
     #setting{
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
     }
     h4{
         color: $cataloge_color;
@@ -186,30 +270,32 @@
         text-align: center;
     }
 }
-.item1{
-    grid-column: 2/3;
-}
-.item2 {
-    grid-column: 3/4;
-}
-.item3 {
-    grid-column: 4/5;
-}
-.item4 {
-    grid-column: 5/6;
-}
 .block-offers__cataloge_item_pictures {
     position: relative;
-   
+    img{
+        position: absolute;
+    }
 }
 #shape1 {
     bottom: 0;
     right: 0;
-    left: -2.4em;
+    left: 2.9rem;
+}
+#shape2{
+    top: 0;
+    left: 2.5rem;
+}
+#shape3{
+    top: 0;
+    left: 0.5rem;
+}
+#shape4{
+    bottom: 0;
+    left: 1.5rem;
 }
 #weather{
     z-index: 1;
-            position: relative;
+    position: relative;
 }
 .block-destinations {
     padding: 0 $horizontal_space;
@@ -466,24 +552,50 @@
     @include flex-row ();
     gap: $space-m;
 }
-#leaf{
-    padding: $space-xs;
+.block-booking-right-wrapper__circle{
     background-color: $download_color;
     border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    position: relative;
+}
+#leaf{
+   width: 14px;
+   height: 14px;
+   margin: auto;
+   display: block;
+   position: absolute;
+   top: 0;
+bottom: 0;
+    left: 0;
+    right: 0;
 }
 #map{
-    padding: $space-xs;
-    background-color: $download_color;
-    border-radius: 50%
+    width: 14px;
+   height: 14px;
+   margin: auto;
+   display: block;
+   position: absolute;
+   top: 0;
+bottom: 0;
+    left: 0;
+    right: 0;
 }
 #telegram{
-    padding: $space-xs;
-    background-color: $download_color;
-    border-radius: 50%
+    width: 14px;
+    height: 14px;
+    margin: auto;
+   display: block;
+   position: absolute;
+   top: 0;
+bottom: 0;
+    left: 0;
+    right: 0;
 }
 .block-booking-right-wrapper__people{
     @include flex-row ();
     gap: $space-xs;
+    white-space: nowrap;
     p{
         color: $grey_color;
         font-family: $font_family_for_h3_medium;
@@ -585,8 +697,8 @@
 }
 .block-testimonials-right__photo{
     position: absolute;
-    top: -24%;
-    left: -9%;
+    top: -3rem;
+    left: -2rem;
 }
 .block-testimonials-right__container{
     @include flex-column();
@@ -655,7 +767,6 @@
     background-image: url('/img/form_decoration.png');
     background-repeat: no-repeat, no-repeat ;
     background-position: bottom 4vh right 3vw;
-    margin-right: $space-l;
     padding-bottom: $space-l;
 }
 .block-form__container{
@@ -713,10 +824,14 @@
     right: 0;
 }
 .block-form__container__circle {
-    background: linear-gradient(#747DEF #5E3BE1);
+    background: linear-gradient(#747DEF, #5E3BE1);
     border-radius: 50%;
     position: relative; 
     z-index: 1;
+    width: 70px;
+    height: 70px;
+    top: -2rem;
+    right: -2rem;
     img{
         padding: $space-xs;
         position: absolute;
@@ -864,3 +979,4 @@
     padding-bottom: $space-l;
 }
 
+@import "_media";

@@ -1,38 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0;">
     <title>Jadoo</title>
 
     <link rel="stylesheet" href="style/style.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Volkhov:wght@700&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-
-    </head><link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
-    <body>
+</head>
+
+
+<body>
     <div class="block-girl">
         <header class="block-girl-header">
             <div class="header__logo">
@@ -41,10 +30,10 @@
             <div class="header__nav-bar">
                 <nav>
                     <ul>
-                      <li><a href="#">Desitnations</a></li>
-                      <li><a href="#">Hotels</a></li>
-                      <li><a href="#">Flights</a></li>
-                      <li><a href="#">Bookings</a></li>
+                        <li id="nav1"><a href="#" >Desitnations</a></li>
+                        <li id="nav2"><a href="#" >Hotels</a></li>
+                        <li id="nav3"><a href="#" >Flights</a></li>
+                        <li id="nav4"><a href="#" >Bookings</a></li>
                     </ul>
                 </nav>
             </div>
@@ -57,32 +46,34 @@
             <div class="header__dropdown">
                 <label for="language"></label>
                 <select name="language" id="language">
-                <option value="en">EN</option>
-                <option value="ua">UA</option>
+                    <option value="en">EN</option>
+                    <option value="ua">UA</option>
                 </select>
             </div>
-       </header>
-       <div class="block-girl-container">
-        <div class="block-girl-container-left">
-            <h3>Best Destinations around the world</h3>
-            <h1>Travel, enjoy and live a new and full life</h1>
-            <p>Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it 
-                engrossed listening. Park gate sell they west hard for the.</p>
-            <div class="block-girl-container-left__buttons">
-                <button id="more_button">Find out more</button>
-                <button id="circle_button"><img src="img/triangle.svg"></button>
-                
-                <p>Play Demo</p>
+        </header>
+        <div class="block-girl-container">
+            <div class="block-girl-container-left">
+                <h3>Best Destinations around the world</h3>
+                <h1>Travel, enjoy and live a new and full life</h1>
+                <p>Built Wicket longer admire do barton vanity itself do in it. Preferred to sportsmen it
+                    engrossed listening. Park gate sell they west hard for the.</p>
+                <div class="block-girl-container-left__buttons">
+                    <button id="more_button">Find out more</button>
+                    <button id="circle_button"><img src="img/triangle.svg"></button>
+
+                    <p>Play Demo</p>
+                </div>
+            </div>
+            <div class="block-girl-container-right">
+                <img src="img/Traveller 1.png" alt="Traveller photo">
+            </div>
+            <div class="block-girl-container-right__plane1">
+                <img src="img/Plane.svg" alt="Plane">
+            </div>
+            <div class="block-girl-container-right__plane2">
+                <img src="img/Plane.svg" alt="Plane">
             </div>
         </div>
-        <div class="block-girl-container-right">
-            <img src="img/Traveller 1.png" alt="Traveller photo">
-        </div>
-        <div class="block-girl-container-right__plane">
-            <img src="img/Plane.svg" alt="Plane">
-            <img src="img/Plane.svg" alt="Plane">
-        </div>
-    </div>
     </div>
     <div class="block-offers">
         <h3>CATEGORY</h3>
@@ -90,37 +81,37 @@
         <div class="block-offers__cataloge">
             <div class="block-offers__cataloge_item item1">
                 <div class="block-offers__cataloge_item_pictures">
-<!-- TODO: z-index with pictures-->
-<!-- TODO: HOVER-->
-                <span><img src="img/satellite-dish.png" alt="weather"></span>
-                <span><img src="img/shape_weather.png" alt="shape" id="shape1"></span>
+                    <img src="img/satellite-dish.png" alt="weather">
+                    <img src="img/shape_weather.png" alt="shape" id="shape1">
                 </div>
-                <h4>Calculated Weather </h4>
+                <h4 id="calculated">Calculated Weather </h4>
                 <p>Built Wicket longer admire do barton vanity itself do in it.</p>
             </div>
             <div class="block-offers__cataloge_item item2">
                 <div class="block-offers__cataloge_item_pictures">
-                    <span><img src="img/plane_cataloge.png" alt="plane" id="cataloge_plane"></span>
-                    <span><img src="img/shape.png" alt="shape" id="shape2"></span>
+                    <img src="img/plane_cataloge.png" alt="plane" id="cataloge_plane">
+                    <img src="img/shape.png" alt="shape" id="shape2">
                 </div>
                 <h4>Best Flights</h4>
                 <p>Engrossed listening. Park gate sell they west hard for the.</p>
             </div>
             <div class="block-offers__cataloge_item item3">
-                <div class="block-offers__cataloge_item_pictures"> 
-                    <span><img src="img/microphone.png" alt="microphone" id="microphone"></span>
-                    <span><img src="img/shape.png" alt="shape" id="shape3"></span>
+                <div class="block-offers__cataloge_item_pictures">
+                    <img src="img/microphone.png" alt="microphone" id="microphone">
+                    <img src="img/shape.png" alt="shape" id="shape3">
                 </div>
                 <h4>Local Events</h4>
                 <p>Barton vanity itself do in it. Preferd to men it engrossed listening. </p>
+               
             </div>
             <div class="block-offers__cataloge_item item4">
-                <div class="block-offers__cataloge_item_pictures"> 
-                    <span><img src="img/setting.png" alt="setting" id="setting"></span>
-                    <span><img src="img/shape.png" alt="shape" id="shape4"></span>
-                </div>    
+                <div class="block-offers__cataloge_item_pictures">
+                    <img src="img/setting.png" alt="setting" id="setting">
+                    <img src="img/shape.png" alt="shape" id="shape4">
+                </div>
                 <h4>Customization</h4>
                 <p> We deliver outsourced aviation services for military customers</p>
+                
             </div>
         </div>
     </div>
@@ -178,7 +169,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. </p>
                 </div>
                 <div class="block-booking-left__text2">
-                     <h4>Make Payment</h4>
+                    <h4>Make Payment</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Urna, tortor tempus. </p>
                 </div>
                 <div class="block-booking-left__text3">
@@ -214,10 +205,7 @@
                     <div class="block-booking-right-wrapper__bottom-line__heart">
                         <img src="img/heart.png" alt="Heart">
                     </div>
-<!-- TODO: HOVER-->
-                    <!-- <div class="block-booking-right-wrapper__bottom-line__heart_hover">
-                        <img src="img/heart_hover.png" alt="Heart hover" id="heart_hover">
-                    </div> -->
+                    <!-- TODO: HOVER-->
                 </div>
             </div>
             <div class="block-booking-right__container">
@@ -249,13 +237,12 @@
         </div>
         <div class="block-testimonials-right">
             <div class="block-testimonials-right__container">
-                <p>“On the Windows talking painted pasture yet its express parties use. 
-                Sure last upon he same as knew next. Of believed or diverted no.”
+                <p>“On the Windows talking painted pasture yet its express parties use.
+                    Sure last upon he same as knew next. Of believed or diverted no.”
                 </p>
                 <h3>Mike Taylor</h3>
                 <h5>Lahore, Pakistan</h5>
             </div>
-    <!-- TODO: Сползает вверх картинка-->
             <div class="block-testimonials-right__photo">
                 <img src="img/man.png" alt="Man">
             </div>
@@ -264,18 +251,18 @@
 
     <div class="block-companies">
         <div class="block-companies__logos">
-            <img src="img/axon.svg" alt="axon" id="axon"> 
+            <img src="img/axon.svg" alt="axon" id="axon">
         </div>
-        <div class="block-companies__logos"> 
+        <div class="block-companies__logos">
             <img src="img/jetstar.svg" alt="jetstar" id="jetstar">
         </div>
-        <div class="block-companies__logos"> 
+        <div class="block-companies__logos">
             <img src="img/expedia.svg" alt="expedia" id="expedia">
         </div>
-        <div class="block-companies__logos">  
+        <div class="block-companies__logos">
             <img src="img/qantas.svg" alt="qantas" id="qantas">
         </div>
-        <div class="block-companies__logos">  
+        <div class="block-companies__logos">
             <img src="img/alitalia.svg" alt="alitalia" id="alitalia">
         </div>
     </div>
@@ -287,10 +274,9 @@
                 interesting offers about Cobham
             </h2>
             <form>
-                <input type="text" name="firstname" value="Your email" id="form__input">
+                <input type="text" name="firstname" value="Your email" id="form__input" required>
                 <input type="submit" value="Subscribe" id="form__button">
             </form>
-<!--TODO: telegram icon-->
             <div class="block-form__container__circle__wrapper">
                 <div class="block-form__container__circle">
                     <img src="img/form_telegram.png" alt="Telegram">
@@ -299,45 +285,49 @@
         </div>
     </div>
 
-<footer> 
-    <div class="block-footer">
-        <h1>Jadoo.</h1>
-        <h3>Company</h3>
-        <h3>Contact</h3>
-        <h3>More</h3>
-        <p>Book your trip in minute, get full Control for much longer.</p>
-        <a>About</a>
-        <a>Help/FAQ</a>
-        <a>Airlinefees</a>
-        <a>Careers</a>
-        <a>Press</a>
-        <a>Airline</a>
-        <a>Mobile</a>
-        <a>Affilates</a>
-        <a>Low fare tips</a>
-        <div class="block-footer__socials__wrapper">
-            <div class="block-footer__socials">
-                <div id="facebook-icon" class="social-icon">
-                    <img class="social-icon-image" src="img/Facebook.svg" alt="Facebook logo">
+    <footer>
+        <div class="block-footer">
+            <h1>Jadoo.</h1>
+            <h3>Company</h3>
+            <h3>Contact</h3>
+            <h3>More</h3>
+            <p>Book your trip in minute, get full Control for much longer.</p>
+            <a>About</a>
+            <a>Help/FAQ</a>
+            <a>Airlinefees</a>
+            <a>Careers</a>
+            <a>Press</a>
+            <a>Airline</a>
+            <a>Mobile</a>
+            <a>Affilates</a>
+            <a>Low fare tips</a>
+            <div class="block-footer__socials__wrapper">
+                <div class="block-footer__socials">
+                    <div id="facebook-icon" class="social-icon">
+                        <a href="https://uk-ua.facebook.com/" target="_blank"><img class="social-icon-image"
+                                src="img/Facebook.svg" alt="Facebook logo"></a>
+                    </div>
+                    <div id="instagram-icon" class="social-icon">
+                        <a href="https://www.instagram.com/" target="_blank"><img class="social-icon-image"
+                                src="img/instagram.svg" alt="Instagram logo"></a>
+                    </div>
+                    <div id="twitter-icon" class="social-icon">
+                        <a href="https://twitter.com/?lang=ru" target="_blank"><img class="social-icon-image"
+                                src="img/twitter.svg" alt="Twitter logo"></a>
+                    </div>
                 </div>
-                <div id="instagram-icon" class="social-icon">
-                    <img class="social-icon-image" src="img/instagram.svg" alt="Instagram logo">
+                <div class="text-item-6">
+                    <h3>Discover our app</h3>
                 </div>
-                <div id="twitter-icon" class="social-icon">
-                    <img class="social-icon-image" src="img/twitter.svg" alt="Twitter logo">
+                <div id="footer-stores">
+                    <img src="img/Google Play.svg" alt="Google play">
+                    <img src="img/Play Store.svg" alt="App store">
                 </div>
-            </div>
-            <div class="text-item-6">
-                <h3>Discover our app</h3>
-            </div>
-            <div id="footer-stores">
-                <img src="img/Google Play.svg" alt="Google play">
-                <img src="img/Play Store.svg" alt="App store">
             </div>
         </div>
-   </div>
-   <p id="rights">All rights reserved@jadoo.co</p>
-</footer>
+        <p id="rights">All rights reserved@jadoo.co</p>
+    </footer>
 
 </body>
+
 </html>

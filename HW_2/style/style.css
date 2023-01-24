@@ -28,42 +28,27 @@ section {
   display: block;
 }
 
-@media (max-width: 478.98px) {
-  .block-girl-container-right {
-    display: none;
-  }
-  .block-girl-container-right__plane {
-    display: none;
-  }
-  .block-destinations-cities {
-    display: grid;
-    grid-template-columns: repeat(1fr);
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-    justify-items: center;
-  }
-  .block-destinations-cities__rome {
-    grid-row: 1/2;
-  }
-  .block-destinations-cities__london {
-    grid-row: 2/3;
-  }
-  .block-destinations-cities__europe {
-    grid-row: 3/4;
-  }
+body {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
+
 .block-girl {
   background-image: url("/img/Decore.png");
   background-position: top right;
   background-repeat: no-repeat;
-  padding: 47px 144px;
+  padding: 3rem 10rem;
+  background-size: contain;
 }
 
 .block-girl-header {
-  padding-bottom: 32px;
+  padding-bottom: 2rem;
   font-family: "Open Sans", sans-serif;
-  font-size: 16px;
+  font-size: 0.9rem;
   color: #212832;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
@@ -92,6 +77,11 @@ section {
           justify-content: space-between;
 }
 
+#nav1:hover, #nav4:hover, #nav3:hover, #nav2:hover {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 .header__authorization__login {
   grid-column: 8/9;
   justify-self: end;
@@ -103,19 +93,23 @@ section {
 }
 .header__authorization__button button {
   height: 100%;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   background-color: transparent;
   border: #212832 1px solid;
   border-radius: 3px;
-  font-size: 16px;
+  font-size: 0.9rem;
   cursor: pointer;
+}
+.header__authorization__button button:hover {
+  background-color: #DF6951;
+  color: white;
 }
 
 .header__dropdown {
   grid-column: 10/11;
 }
 .header__dropdown select {
-  font-size: 16px;
+  font-size: 0.9rem;
   color: #212832;
   font-family: "Open Sans", sans-serif;
   border: none;
@@ -130,7 +124,7 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding-bottom: 144px;
+  padding-bottom: 10rem;
 }
 
 .block-girl-container-left {
@@ -147,21 +141,21 @@ section {
           justify-content: center;
 }
 .block-girl-container-left h3 {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
   color: #DF6951;
 }
 .block-girl-container-left h1 {
   font-family: "Volkhov", serif;
-  font-size: 84px;
+  font-size: 5rem;
   line-height: 89px;
   color: #14183E;
 }
 .block-girl-container-left p {
   font-family: "Open Sans", sans-serif;
   color: #5E6282;
-  font-size: 16px;
+  font-size: 0.9rem;
   line-height: 30px;
 }
 
@@ -179,7 +173,7 @@ section {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  gap: 16px;
+  gap: 1rem;
 }
 .block-girl-container-left__buttons #circle_button {
   background-color: #DF6951;
@@ -189,44 +183,105 @@ section {
   border: none;
   text-align: center;
   vertical-align: center;
+  padding: 0;
+}
+.block-girl-container-left__buttons #circle_button img {
+  height: 16px;
+  width: 16px;
+  margin: auto;
+  display: block;
 }
 .block-girl-container-left__buttons #more_button {
   color: white;
   background-color: #F1A501;
   font-family: "Open Sans", sans-serif;
   border-radius: 5px;
-  padding: 16px;
+  padding: 1rem;
   border: none;
-  margin-right: 32px;
+  margin-right: 2rem;
+}
+.block-girl-container-left__buttons #more_button:hover {
+  background-color: #ff9900;
+}
+
+.block-girl-container-right {
+  position: relative;
+}
+
+.block-girl-container-right__plane1 {
+  position: absolute;
+  right: 40rem;
+  top: 10rem;
+}
+.block-girl-container-right__plane1:hover {
+  -webkit-animation: flight 3s;
+          animation: flight 3s;
+}
+
+@-webkit-keyframes flight {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to {
+    -webkit-transform: translate(50rem, -20rem);
+            transform: translate(50rem, -20rem);
+    opacity: 0;
+  }
+}
+
+@keyframes flight {
+  from {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  to {
+    -webkit-transform: translate(50rem, -20rem);
+            transform: translate(50rem, -20rem);
+    opacity: 0;
+  }
+}
+.block-girl-container-right__plane2 {
+  position: absolute;
+  right: 8rem;
+  top: 17rem;
 }
 
 .block-offers {
   background-image: url(/img/block-offers__decoration.png);
   background-position: top right;
   background-repeat: no-repeat;
-  margin-right: 104px;
-  padding-bottom: 104px;
+  margin-right: 7rem;
+  padding-bottom: 7rem;
 }
 .block-offers h3 {
   font-family: "Poppins", sans-serif;
   color: #5E6282;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1rem;
   text-align: center;
 }
 .block-offers h1 {
   font-family: "Volkhov", serif;
   color: #14183E;
-  font-size: 50px;
+  font-size: 3rem;
   text-align: center;
-  padding-top: 16px;
-  padding-bottom: 104px;
+  padding-top: 1rem;
+  padding-bottom: 7rem;
 }
 
 .block-offers__cataloge {
   display: grid;
-  grid-template-columns: 144px repeat(4, 1fr) 144px;
-  gap: 104px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  padding: 0 10rem;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+#calculated {
+  white-space: nowrap;
 }
 
 .block-offers__cataloge_item {
@@ -240,7 +295,36 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 32px 47px 47px 47px;
+  padding: 3rem;
+  position: relative;
+  z-index: 10;
+}
+.block-offers__cataloge_item:hover::before {
+  border-radius: 36px;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(216, 215, 215, 0.5);
+          box-shadow: 0px 0px 8px 0px rgba(216, 215, 215, 0.5);
+}
+.block-offers__cataloge_item::before {
+  content: "";
+  background-color: white;
+  z-index: -5;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.block-offers__cataloge_item:hover::after {
+  content: "";
+  background-image: url("/img/Red_shape.png");
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  -webkit-transform: translateZ(-10rem);
+          transform: translateZ(-10rem);
+  z-index: -10;
+  bottom: -2rem;
+  left: -2rem;
 }
 .block-offers__cataloge_item img:first-child {
   width: 66px;
@@ -252,11 +336,6 @@ section {
   width: 50px;
   height: 50px;
 }
-.block-offers__cataloge_item img:hover {
-  border-radius: 5px;
-  -webkit-box-shadow: -8px 8px 8px 0px rgba(216, 215, 215, 0.5);
-          box-shadow: -8px 8px 8px 0px rgba(216, 215, 215, 0.5);
-}
 .block-offers__cataloge_item #cataloge_plane {
   width: 137px;
   height: 95px;
@@ -266,49 +345,51 @@ section {
   height: 69px;
 }
 .block-offers__cataloge_item #setting {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
 }
 .block-offers__cataloge_item h4 {
   color: #1E1D4C;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
   font-family: "Open Sans", sans-serif;
-  padding-top: 32px;
+  padding-top: 2rem;
 }
 .block-offers__cataloge_item p {
   color: #5E6282;
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: bold;
   font-family: "Poppins", sans-serif;
-  padding-top: 32px;
+  padding-top: 2rem;
   text-align: center;
-}
-
-.item1 {
-  grid-column: 2/3;
-}
-
-.item2 {
-  grid-column: 3/4;
-}
-
-.item3 {
-  grid-column: 4/5;
-}
-
-.item4 {
-  grid-column: 5/6;
 }
 
 .block-offers__cataloge_item_pictures {
   position: relative;
 }
+.block-offers__cataloge_item_pictures img {
+  position: absolute;
+}
 
 #shape1 {
   bottom: 0;
   right: 0;
-  left: -2.4em;
+  left: 2.9rem;
+}
+
+#shape2 {
+  top: 0;
+  left: 2.5rem;
+}
+
+#shape3 {
+  top: 0;
+  left: 0.5rem;
+}
+
+#shape4 {
+  bottom: 0;
+  left: 1.5rem;
 }
 
 #weather {
@@ -317,22 +398,22 @@ section {
 }
 
 .block-destinations {
-  padding: 0 144px;
+  padding: 0 10rem;
 }
 .block-destinations h3 {
   font-family: "Poppins", sans-serif;
   color: #5E6282;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1rem;
   text-align: center;
 }
 .block-destinations h1 {
   font-family: "Volkhov", serif;
   color: #14183E;
-  font-size: 50px;
+  font-size: 3rem;
   text-align: center;
-  padding-top: 16px;
-  padding-bottom: 104px;
+  padding-top: 1rem;
+  padding-bottom: 7rem;
 }
 
 .block-destinations-cities {
@@ -362,12 +443,12 @@ section {
 .block-destinations-cities__rome__container {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 16px;
+  gap: 1rem;
   background-color: white;
   justify-items: start;
   border-bottom-left-radius: 24px;
   border-bottom-right-radius: 24px;
-  padding: 32px;
+  padding: 2rem;
   position: absolute;
   z-index: 1;
   width: 53%;
@@ -375,7 +456,7 @@ section {
   left: 16.75%;
 }
 .block-destinations-cities__rome__container span {
-  font-size: 18px;
+  font-size: 1rem;
   color: #5E6282;
   font-family: "Poppins", sans-serif;
 }
@@ -399,7 +480,7 @@ section {
           flex-direction: row;
 }
 .block-destinations-cities__rome__container .block-destinations-cities__rome__container_days p {
-  font-size: 18px;
+  font-size: 1rem;
   color: #5E6282;
   font-family: "Poppins", sans-serif;
 }
@@ -407,12 +488,12 @@ section {
 .block-destinations-cities__london__container {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 16px;
+  gap: 1rem;
   background-color: white;
   justify-items: start;
   border-bottom-left-radius: 24px;
   border-bottom-right-radius: 24px;
-  padding: 32px;
+  padding: 2rem;
   position: absolute;
   z-index: 1;
   width: 53%;
@@ -420,7 +501,7 @@ section {
   left: 16.75%;
 }
 .block-destinations-cities__london__container span {
-  font-size: 18px;
+  font-size: 1rem;
   color: #5E6282;
   font-family: "Poppins", sans-serif;
 }
@@ -444,7 +525,7 @@ section {
           flex-direction: row;
 }
 .block-destinations-cities__london__container .block-destinations-cities__london__container_days p {
-  font-size: 18px;
+  font-size: 1rem;
   color: #5E6282;
   font-family: "Poppins", sans-serif;
 }
@@ -452,12 +533,12 @@ section {
 .block-destinations-cities__europe__container {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 16px;
+  gap: 1rem;
   background-color: white;
   justify-items: start;
   border-bottom-left-radius: 24px;
   border-bottom-right-radius: 24px;
-  padding: 32px;
+  padding: 2rem;
   position: absolute;
   z-index: 1;
   width: 53%;
@@ -465,7 +546,7 @@ section {
   left: 16.75%;
 }
 .block-destinations-cities__europe__container span {
-  font-size: 18px;
+  font-size: 1rem;
   color: #5E6282;
   font-family: "Poppins", sans-serif;
 }
@@ -489,7 +570,7 @@ section {
           flex-direction: row;
 }
 .block-destinations-cities__europe__container .block-destinations-cities__europe__container_days p {
-  font-size: 18px;
+  font-size: 1rem;
   color: #5E6282;
   font-family: "Poppins", sans-serif;
 }
@@ -507,8 +588,8 @@ section {
 }
 
 .block-booking {
-  padding: 0 144px;
-  padding-bottom: 170px;
+  padding: 0 10rem;
+  padding-bottom: 11.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -524,21 +605,21 @@ section {
   font-family: "Poppins", sans-serif;
   color: #5E6282;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1rem;
 }
 .block-booking-left h1 {
   font-family: "Volkhov", serif;
   color: #14183E;
   font-weight: bold;
-  font-size: 50px;
-  padding-top: 32px;
+  font-size: 3rem;
+  padding-top: 2rem;
 }
 
 .block-booking-left-wrapper {
   display: grid;
   grid-template-columns: 1fr 15fr;
-  gap: 47px 16px;
-  padding-top: 47px;
+  gap: 3rem 1rem;
+  padding-top: 3rem;
 }
 
 #white_icon_1 {
@@ -563,13 +644,13 @@ section {
 .block-booking-left__text1 h4 {
   font-family: "Poppins", sans-serif;
   color: #5E6282;
-  font-size: 16px;
+  font-size: 0.9rem;
   font-weight: bold;
 }
 .block-booking-left__text1 p {
   font-family: "Poppins", sans-serif;
   color: #5E6282;
-  font-size: 16px;
+  font-size: 0.9rem;
 }
 
 .block-booking-left__text2 {
@@ -579,13 +660,13 @@ section {
 .block-booking-left__text2 h4 {
   font-family: "Poppins", sans-serif;
   color: #5E6282;
-  font-size: 16px;
+  font-size: 0.9rem;
   font-weight: bold;
 }
 .block-booking-left__text2 p {
   font-family: "Poppins", sans-serif;
   color: #5E6282;
-  font-size: 16px;
+  font-size: 0.9rem;
 }
 
 .block-booking-left__text3 {
@@ -595,13 +676,13 @@ section {
 .block-booking-left__text3 h4 {
   font-family: "Poppins", sans-serif;
   color: #5E6282;
-  font-size: 16px;
+  font-size: 0.9rem;
   font-weight: bold;
 }
 .block-booking-left__text3 p {
   font-family: "Poppins", sans-serif;
   color: #5E6282;
-  font-size: 16px;
+  font-size: 0.9rem;
 }
 
 .img_wrapper_1 {
@@ -662,10 +743,10 @@ section {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  gap: 32px;
+  gap: 2rem;
   border-radius: 24px;
   background-color: white;
-  padding: 32px;
+  padding: 2rem;
   width: 83%;
   background-color: white;
   -webkit-box-shadow: 15px -5px 100px 12px #e9f5fd;
@@ -674,7 +755,7 @@ section {
 .block-booking-right-wrapper h2 {
   font-family: "Poppins", sans-serif;
   color: #080809;
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -686,18 +767,18 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 16px;
+  gap: 1rem;
 }
 .block-booking-right-wrapper__text h3 {
   color: #84829A;
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 0.9rem;
   letter-spacing: -0.5%;
 }
 .block-booking-right-wrapper__text p {
   color: #84829A;
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 0.9rem;
   letter-spacing: -0.5%;
 }
 
@@ -709,25 +790,51 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 47px;
+  gap: 3rem;
+}
+
+.block-booking-right-wrapper__circle {
+  background-color: #F5F5F5;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  position: relative;
 }
 
 #leaf {
-  padding: 16px;
-  background-color: #F5F5F5;
-  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  margin: auto;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 #map {
-  padding: 16px;
-  background-color: #F5F5F5;
-  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  margin: auto;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 #telegram {
-  padding: 16px;
-  background-color: #F5F5F5;
-  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  margin: auto;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 .block-booking-right-wrapper__people {
@@ -738,19 +845,20 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 16px;
+  gap: 1rem;
+  white-space: nowrap;
 }
 .block-booking-right-wrapper__people p {
   color: #84829A;
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 0.9rem;
 }
 
 .block-booking-right-wrapper__bottom-line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 144px;
+  gap: 10rem;
 }
 
 .block-booking-right__container {
@@ -771,8 +879,8 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 32px;
-  padding: 16px 32px;
+  gap: 2rem;
+  padding: 1rem 2rem;
   background-color: white;
   border-radius: 24px;
   -webkit-box-shadow: 10px -5px 100px 12px rgba(240, 240, 240, 0.8431372549);
@@ -780,12 +888,12 @@ section {
 }
 
 .block-booking-right__container__wrapper__text h4 {
-  font-size: 16px;
+  font-size: 0.9rem;
   color: #84829A;
   font-family: "Poppins", sans-serif;
 }
 .block-booking-right__container__wrapper__text h3 {
-  font-size: 18px;
+  font-size: 1rem;
   color: #080809;
   font-weight: bold;
   font-family: "Poppins", sans-serif;
@@ -800,15 +908,15 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 8px;
+  gap: 0.5rem;
 }
 .block-booking-right__container__wrapper__text__bottom #persant {
-  font-size: 14px;
+  font-size: 0.75rem;
   color: #8A79DF;
   font-family: "Poppins", sans-serif;
 }
 .block-booking-right__container__wrapper__text__bottom p {
-  font-size: 14px;
+  font-size: 0.75rem;
   color: #080809;
   font-family: "Poppins", sans-serif;
 }
@@ -852,20 +960,20 @@ section {
           flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 0 144px;
-  padding-bottom: 104px;
+  padding: 0 10rem;
+  padding-bottom: 7rem;
 }
 
 .block-testimonials-left h3 {
   font-family: "Poppins", sans-serif;
   color: #5E6282;
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: bold;
 }
 .block-testimonials-left h1 {
   font-family: "Volkhov", serif;
   color: #14183E;
-  font-size: 50px;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -877,8 +985,8 @@ section {
 
 .block-testimonials-right__photo {
   position: absolute;
-  top: -24%;
-  left: -9%;
+  top: -3rem;
+  left: -2rem;
 }
 
 .block-testimonials-right__container {
@@ -890,7 +998,7 @@ section {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 44px;
-  padding: 16px 32px;
+  padding: 1rem 2rem;
   background-color: white;
   border-radius: 24px;
   -webkit-box-shadow: 10px -5px 100px 12px rgba(240, 240, 240, 0.8431372549);
@@ -899,25 +1007,25 @@ section {
 }
 .block-testimonials-right__container p {
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
+  font-size: 0.9rem;
   color: #5E6282;
   line-height: 30px;
-  padding-bottom: 32px;
+  padding-bottom: 2rem;
 }
 .block-testimonials-right__container h3 {
   color: #5E6282;
   font-family: "Poppins", sans-serif;
-  font-size: 18px;
-  padding-bottom: 16px;
+  font-size: 1rem;
+  padding-bottom: 1rem;
 }
 .block-testimonials-right__container h5 {
   font-family: "Poppins", sans-serif;
-  font-size: 14px;
+  font-size: 0.75rem;
   color: #5E6282;
 }
 
 .block-companies {
-  padding: 0 144px;
+  padding: 0 10rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   justify-items: center;
@@ -950,12 +1058,11 @@ section {
 }
 
 .block-form {
-  padding: 170px 144px;
+  padding: 11.8rem 10rem;
   background-image: url("/img/form_decoration.png");
   background-repeat: no-repeat, no-repeat;
   background-position: bottom 4vh right 3vw;
-  margin-right: 104px;
-  padding-bottom: 104px;
+  padding-bottom: 7rem;
 }
 
 .block-form__container {
@@ -964,7 +1071,7 @@ section {
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  padding: 75px 144px;
+  padding: 5rem 10rem;
   background-image: url("/img/form-left-docoration.png"), url("/img/form-right-docoration.png");
   background-repeat: no-repeat, no-repeat;
   background-position: bottom left, top right;
@@ -974,9 +1081,9 @@ section {
 .block-form__container h2 {
   color: #5E6282;
   font-family: "Poppins", sans-serif;
-  font-size: 33px;
+  font-size: 2.4rem;
   text-align: center;
-  padding-bottom: 75px;
+  padding-bottom: 5rem;
 }
 .block-form__container form {
   display: -webkit-box;
@@ -993,13 +1100,13 @@ section {
 
 #form__input {
   font-family: "Montserrat", sans-serif;
-  padding: 0 104px 0 75px;
-  margin-right: 16px;
-  font-size: 14px;
+  padding: 0 7rem 0 5rem;
+  margin-right: 1rem;
+  font-size: 0.75rem;
   background-image: url("/img/email.png");
   border-radius: 10px;
   background-repeat: no-repeat;
-  background-position: center left 32px;
+  background-position: center left 2rem;
   border: none;
   height: 100%;
 }
@@ -1008,10 +1115,10 @@ section {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF946D), to(#FF7D68));
   background: linear-gradient(#FF946D, #FF7D68);
   border: none;
-  padding: 0 32px 0 32px;
+  padding: 0 2rem 0 2rem;
   border-radius: 10px;
   color: white;
-  font-size: 18px;
+  font-size: 1rem;
   font-family: "Open Sans", sans-serif;
   height: 100%;
 }
@@ -1024,14 +1131,18 @@ section {
 }
 
 .block-form__container__circle {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(#5E3BE1, #747DEF));
-  background: linear-gradient(#747DEF #5E3BE1);
+  background: -webkit-gradient(linear, left top, left bottom, from(#747DEF), to(#5E3BE1));
+  background: linear-gradient(#747DEF, #5E3BE1);
   border-radius: 50%;
   position: relative;
   z-index: 1;
+  width: 70px;
+  height: 70px;
+  top: -2rem;
+  right: -2rem;
 }
 .block-form__container__circle img {
-  padding: 16px;
+  padding: 1rem;
   position: absolute;
   left: 0;
   top: 0;
@@ -1043,24 +1154,24 @@ section {
 .block-footer {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 16px 47px;
+  gap: 1rem 3rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 104px;
+  padding-bottom: 7rem;
 }
 .block-footer h1 {
   grid-column: 2/3;
   grid-row: 1/2;
   color: #181E4B;
-  font-size: 50px;
+  font-size: 3rem;
   font-family: "Poppins", sans-serif;
 }
 .block-footer h3 {
   color: #080809;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 .block-footer h3:nth-child(2) {
   grid-column: 3/4;
@@ -1079,12 +1190,12 @@ section {
   grid-row: 2/3;
   font-family: "Poppins", sans-serif;
   color: #5E6282;
-  font-size: 14px;
+  font-size: 0.75rem;
   line-height: 124.5%;
 }
 .block-footer a {
   color: #5E6282;
-  font-size: 18px;
+  font-size: 1rem;
   font-family: "Poppins", sans-serif;
 }
 .block-footer a:nth-child(6) {
@@ -1202,8 +1313,82 @@ section {
 #rights {
   font-family: "Poppins", sans-serif;
   color: #5E6282;
-  font-size: 14px;
+  font-size: 0.75rem;
   line-height: 124.5%;
   text-align: center;
-  padding-bottom: 104px;
+  padding-bottom: 7rem;
+}
+
+@media only screen and (max-width: 478.98px) {
+  .block-girl-container-right {
+    display: none;
+  }
+  .block-girl {
+    padding: 1rem 1rem;
+  }
+  .block-girl-container-right__plane1 {
+    display: none;
+  }
+  .block-girl-container-right__plane2 {
+    display: none;
+  }
+  .block-girl-header {
+    gap: 0;
+    grid-template-columns: repeat(8, 1fr);
+  }
+  .header__logo {
+    grid-column: 1;
+  }
+  .header__nav-bar {
+    grid-column: 2/4;
+    grid-row: 1/2;
+  }
+  .header__nav-bar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .header__nav-bar ul li {
+    padding-right: 1rem;
+  }
+  .header__authorization__login {
+    grid-column: 3/4;
+    justify-self: end;
+    grid-row: 1/2;
+  }
+  .header__authorization__button {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    justify-self: start;
+    padding-left: 0.5rem;
+  }
+  .header__dropdown {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    justify-self: center;
+    padding-left: 3rem;
+  }
+  .block-girl-container-left h1 {
+    font-size: 2.4rem;
+  }
+  .block-destinations-cities {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    justify-items: center;
+  }
+  .block-destinations-cities__rome {
+    grid-row: 1/2;
+  }
+  .block-destinations-cities__london {
+    grid-row: 2/3;
+  }
+  .block-destinations-cities__europe {
+    grid-row: 3/4;
+  }
 }/*# sourceMappingURL=style.css.map */
